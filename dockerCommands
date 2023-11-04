@@ -1,0 +1,110 @@
+docker run --detach --env MYSQL_ROOT_PASSWORD=dummypassword --env MYSQL_USER=social-media-user --env MYSQL_PASSWORD=dummypassword --env MYSQL_DATABASE=social-media-database --name mysql --publish 3306:3306 mysql:8-oracle
+
+
+
+mysqlsh
+\connect social-media-user@localhost:3306
+\sql
+use social-media-database
+select * from user_details;
+select * from post;
+\quit
+
+
+<dependency>
+    <groupId>com.mysql</groupId>
+    <artifactId>mysql-connector-j</artifactId>
+</dependency> 
+
+
+
+#docker run --detach
+#--env MYSQL_ROOT_PASSWORD=dummypassword
+#--env MYSQL_USER=social-media-user
+#--env MYSQL_PASSWORD=dummypassword
+#--env MYSQL_DATABASE=social-media-database
+#--name mysql --publish 3306:3306 mysql:8-oracle
+
+
+
+docker run --detach --env MYSQL_ROOT_PASSWORD=bookstorepassword --env MYSQL_USER=book-store-user --env MYSQL_PASSWORD=bookstorepassword --env MYSQL_DATABASE=book-store-database --name mysql --publish 3306:3306 mysql:8-oracle
+
+
+docker run -d --name  mysql\ --network bookStoreNetwork \ -e MYSQL_ROOT_PASSWORD=bookstorepassword \ -p 3306:3306 \ mysql:8-oracle
+
+
+
+
+docker run -d --name mysql-container -e MYSQL_ROOT_PASSWORD=bookstorepassword -e MYSQL_DATABASE=book-store-database -e MYSQL_USER=book-store-user -e MYSQL_PASSWORD=bookstorepassword mysql:latest
+
+
+
+docker run --network santhosh-network -p 8080:8080 -d new-bookcart-image:0.0.1
+
+
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';
+
+docker run
+-network <network-name>
+-p <host-machine-port>:<application-po
+
+
+
+CREATE USER 'santhosh'@'localhost' IDENTIFIED BY 'santhosh';
+
+GRANT ALL PRIVILEGES ON . TO 'santhosh'@'localhost' WITH GRANT OPTION;
+
+
+
+CREATE USER 'qwerty'@'localhost' IDENTIFIED BY 'qwerty';
+
+
+GRANT ALL PRIVILEGES ON . TO 'qwerty'@'%'
+    ->   WITH GRANT OPTION;
+
+
+
+GRANT ALL PRIVILEGES ON . TO 'qwerty'@'%' WITH GRANT OPTION;
+
+
+
+
+jdbc:mysql://13.127.193.57:3306/book-store-database
+
+
+dckr_pat_umdZ96D-IZnx6Qc0lMU240RjbhY
+
+
+
+docker tag sandy santhoshmg/restfull-docker-repo
+
+docker push santhoshmg/restfull-docker-repo
+
+
+docker-compose up --build
+
+
+
+
+ sudo docker build -t new-image:0.0.1 .
+sudo docker tag new-image:0.0.1 santhoshmg/santhosh-api:0.0.1
+
+
+EC2 Intances
+sudo docker pull santhoshmg/santhosh-api:0.0.1
+sudo docker pull santhoshmg/santhosh-api:0.0.2
+docker run -d -p 8080:8080 santhoshmg/santhosh-api:0.0.2
+
+
+  997  mvn clean package
+  998  sudo docker build -t new-image:0.1.1 .
+  999  sudo docker tag new-image:0.1.1 santhoshmg/santhosh-api:0.1.1
+ 1000  sudo docker push santhoshmg/santhosh-api:0.1.1
+ 
+ chmod 400 bookCart.pem
+ 
+ssh -i "bookCart.pem" ubuntu@ec2-13-233-204-99.ap-south-1.compute.amazonaws.com
+
+
+

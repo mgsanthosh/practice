@@ -1,0 +1,78 @@
+{
+  "type": "center",
+  "child": {
+    "type": "container",
+    "args": {
+      "width": "300",
+      "padding": [10,10,10,10]
+    },
+    "child": {
+      "type": "card",
+      "args": {
+        "elevation": 10,
+        "shape": {
+          "type": "rounded",
+          "borderRadius": 15
+        }
+      },
+      "child": {
+        "type": "column",
+        "args": {
+          "mainAxisSize": "min"
+        },
+        "children": [
+          {
+            "type": "text",
+            "args": {
+              "text": "8 AM AFFIRMATIONS"
+            }
+          },
+          {
+            "type": "text_form_field",
+            "id": "name",
+            "args": {
+              "decoration": {
+                "hintText": "Santhosh",
+                "labelText": "Enter Your Name"
+              }
+            }
+          },
+          {
+            "type": "text_form_field",
+            "id": "phone",
+            "args": {
+              "decoration": {
+                "hintText": "8220312330",
+                "labelText": "Enter Your Phone Number"
+              }
+            }
+          },
+          {
+            "type": "text_button",
+            "args": {
+              "onPressed": "${set_value('last_name','')}"
+            },
+            "child": {
+              "type": "text",
+              "args": {
+                "text": "SUBSCRIBE"
+              }
+            }
+          },
+          {
+            "type": "text_button",
+            "args": {
+              "onPressed": "${set_value('last_name','')}"
+            },
+            "child": {
+              "type": "text",
+              "args": {
+                "text": "SUBSCRIBE ONE"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
